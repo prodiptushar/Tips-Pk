@@ -1,0 +1,9 @@
+"add this two line in the /etc/wps_supplicant/wps_supplicant-(network adapters name from "ip link").conf
+"then wpa_passphrase Mezin ****** >> /etc/wpa_supplicant/wpa_supplicant-wlp3s0.conf 
+"Mezin is the wifi name and ****** is the password
+"wpa_supplicant -B -i (net adapter name) /etc/wpa_supplicant/wpa_supplicant-wlp3s0.conf 
+
+
+
+ctrl_interface=/run/wpasupplicant
+update_config=1
