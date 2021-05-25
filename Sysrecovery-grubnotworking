@@ -1,0 +1,24 @@
+
+system not working after a foulty upgrade 
+kernel and initram** deleted 
+so booted with live usb and in terminal we put this commands
+
+
+
+
+
+
+
+sudo mount /dev/sda5 /mnt  *****Using the linux installation on your hard drive instead of /dev/sda5
+sudo mount --bind /dev /mnt/dev
+sudo mount --bind /proc /mnt/proc
+sudo mount --bind /sys /mnt/sys
+sudo chroot /mnt
+grub-install /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+sudo pacman -Syyu
+CTRL-D
+sudo umount /mnt/dev
+sudo umount /mnt/proc
+sudo umount /mnt/sys
+sudo umount /mnt
